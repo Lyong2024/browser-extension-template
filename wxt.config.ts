@@ -2,8 +2,8 @@ import { defineConfig, UserManifest } from 'wxt'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  modules: ['@wxt-dev/module-react', 'wxt-module-safari-xcode'],
-  safariXcode: {
+  modules: ['@wxt-dev/module-react', '@extport/wxt'],
+  extport: {
     appCategory: 'public.app-category.productivity',
     bundleIdentifier: 'com.rxliuli.browser-extension-template',
     developmentTeam: 'N2X78TUUFG',
@@ -46,6 +46,10 @@ export default defineConfig({
             required: ['none'],
           },
         },
+        // Empty = compatible with Firefox for Android at AMO's default
+        // minimum — compatibility is a property of the build, not a
+        // submission-time checkbox.
+        gecko_android: {},
       }
       // https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author
       // @ts-expect-error
