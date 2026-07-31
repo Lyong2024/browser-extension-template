@@ -4,9 +4,18 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   modules: ['@wxt-dev/module-react', '@extport/wxt'],
   extport: {
-    appCategory: 'public.app-category.productivity',
-    bundleIdentifier: 'com.rxliuli.browser-extension-template',
-    developmentTeam: 'N2X78TUUFG',
+    extension: 'ext_YOUR_EXTENSION_ID',
+    // Daily anonymous usage ping + the Firefox data-collection declaration,
+    // injected by @extport/wxt. Opt-in; fill the store data-disclosure forms
+    // before shipping it: https://github.com/rxliuli/extport/blob/main/docs/analytics-design.md
+    // analytics: true,
+    // Publishing to Safari? Uncomment and fill in your own values —
+    // extport.config.json is generated from these at `wxt prepare`.
+    // safari: {
+    //   appCategory: 'public.app-category.productivity',
+    //   bundleIdentifier: 'com.example.your-extension',
+    //   developmentTeam: 'YOUR_TEAM_ID',
+    // },
   },
   vite: () => ({
     plugins: [tailwindcss()],

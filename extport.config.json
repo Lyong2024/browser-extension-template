@@ -1,7 +1,0 @@
-{
-  "extension": "ext_YOUR_EXTENSION_ID",
-  "safari": {
-    "projectPath": ".output/Browser Extension Template",
-    "teamId": "N2X78TUUFG"
-  }
-}
