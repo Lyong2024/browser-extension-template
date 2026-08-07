@@ -34,7 +34,7 @@
     "@extport/sdk": "^0.0.5"
   },
   "devDependencies": {
-    "@extport/wxt": "^0.0.5",
+    "@extport/wxt": "^0.0.9",
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
